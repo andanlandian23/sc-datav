@@ -48,6 +48,7 @@ export default function Demo2() {
             <Suspense fallback={null}>
               <Stage
                 intensity={0.5}
+                environment={null}
                 shadows={{
                   type: "accumulative",
                   bias: -0.001,

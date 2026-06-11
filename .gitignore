@@ -25,3 +25,4 @@ back
 *.sw?
 src/assets/sc_specular_map.png
 src/assets/sc_ambient_occlusion_map.png
+.vercel
