@@ -32,7 +32,7 @@ const CanvasWrapper = styled.div`
   height: 100%;
 `;
 
-useEnvironment.preload({ files: "/gs-datav/hdr/venice_sunset_1k.hdr" });
+useEnvironment.preload({ files: "/hdr/venice_sunset_1k.hdr" });
 
 export default function Demo2() {
   return (
@@ -79,7 +79,7 @@ export default function Demo2() {
             <Environment
               background
               blur={0.8}
-              files="/gs-datav/hdr/venice_sunset_1k.hdr"
+              files="/hdr/venice_sunset_1k.hdr"
             />
 
             <OrbitControls
