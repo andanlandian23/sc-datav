@@ -23,7 +23,7 @@ const Title = styled.div`
   text-align: center;
 
   &::after {
-    content: "SICHUAN SMART BRAIN";
+    content: "GANSU SMART BRAIN";
     display: block;
     font-size: 12px;
     letter-spacing: 12px;
@@ -116,7 +116,7 @@ const Bg = styled.svg.attrs({
   z-index: -1;
 `;
 
-const Github = styled.a.attrs({
+const Github = styled.div.attrs({
   children: (
     <svg width="1em" height="1em" viewBox="0 0 22 22" version="1.1">
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -146,8 +146,8 @@ export default function Headder(props: ComponentProps<typeof TitleWrapper>) {
   return (
     <TitleWrapper {...props}>
       <Bg />
-      <Title>四川省智慧城市数据大脑</Title>
-      <Github href="https://github.com/knight-L/datav" target="_blank" />
+      <Title>甘肃省智慧城市数据大脑</Title>
+      <Github />
     </TitleWrapper>
   );
 }

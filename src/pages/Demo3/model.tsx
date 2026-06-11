@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { useControls } from "leva";
 
 export default function Model() {
-  const { scene } = useGLTF("/sc-datav/model/glb/turbine.glb");
+  const { scene } = useGLTF("/gs-datav/model/glb/turbine.glb");
   const obj = useRef<Group>(null!);
 
   const controls = useControls({

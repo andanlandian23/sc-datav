@@ -12,13 +12,13 @@ type PieOption = ComposeOption<
   RadarSeriesOption | TooltipComponentOption | LegendComponentOption
 >;
 
-const data = [582, 421.2, 622.1, 625.3, 265, 224];
+const data = [280, 200, 180, 160, 110];
 const indicator = [
-  { name: "成都市", max: 1000 },
-  { name: "德阳市", max: 1000 },
-  { name: "绵阳市", max: 1000 },
-  { name: "宜宾市", max: 1000 },
-  { name: "达州市", max: 1000 },
+  { name: "嘉峪关市", max: 350 },
+  { name: "白银市", max: 350 },
+  { name: "兰州市", max: 350 },
+  { name: "酒泉市", max: 350 },
+  { name: "天水市", max: 350 },
 ];
 
 export default function Chart5() {
@@ -66,7 +66,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[1000, 1000, 1000, 1000, 1000, 1000]],
+            data: [[350, 350, 350, 350, 350, 350]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -81,7 +81,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[900, 900, 900, 900, 900, 900]],
+            data: [[300, 300, 300, 300, 300, 300]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -96,7 +96,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[800, 800, 800, 800, 800, 800]],
+            data: [[250, 250, 250, 250, 250, 250]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -111,7 +111,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[700, 700, 700, 700, 700, 700]],
+            data: [[200, 200, 200, 200, 200, 200]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -126,7 +126,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[600, 600, 600, 600, 600, 600]],
+            data: [[150, 150, 150, 150, 150, 150]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -141,7 +141,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[500, 500, 500, 500, 500, 500]],
+            data: [[100, 100, 100, 100, 100, 100]],
             symbol: "none",
             lineStyle: {
               width: 0,
@@ -156,7 +156,7 @@ export default function Chart5() {
           },
           {
             type: "radar",
-            data: [[400, 400, 400, 400, 400, 400]],
+            data: [[50, 50, 50, 50, 50, 50]],
             symbol: "none",
             lineStyle: {
               width: 0,

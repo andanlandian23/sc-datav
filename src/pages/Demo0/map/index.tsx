@@ -8,7 +8,7 @@ import BaseMap from "./baseMap";
 import OutLine from "./outline";
 import FlyLine from "./flyLine";
 
-import scMapData from "@/assets/sc.json";
+import scMapData from "@/assets/gs.json";
 
 const data = scMapData as CityGeoJSON;
 

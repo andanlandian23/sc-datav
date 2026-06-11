@@ -13,7 +13,7 @@ import ShapeBox from "./shape";
 import type { GeoProjection } from "d3-geo";
 import type { CityGeoJSON } from "@/types/map";
 
-import scMapData from "@/assets/sc.json";
+import scMapData from "@/assets/gs.json";
 import textureMap from "@/assets/sc_map.png";
 import scNormalMap from "@/assets/sc_normal_map.png";
 import scDisplacementMap from "@/assets/sc_displacement_map.png";

@@ -5,7 +5,7 @@ import { useControls } from "leva";
 import { Color, Shape, Vector2, type IUniform } from "three";
 import { type GeoProjection } from "d3-geo";
 
-import scOutlineData from "@/assets/sc_outline.json";
+import scOutlineData from "@/assets/gs_outline.json";
 
 export function OutLineAnimated() {
   const controls = useControls({

@@ -4,8 +4,8 @@ import Base from "./base";
 import Bottom from "./bottom";
 import type { CityGeoJSON } from "@/types/map";
 
-import scMapData from "@/assets/sc.json";
-import scOutlineData from "@/assets/sc_outline.json";
+import scMapData from "@/assets/gs.json";
+import scOutlineData from "@/assets/gs_outline.json";
 
 const mapData = scMapData as CityGeoJSON,
   outlineData = scOutlineData as CityGeoJSON;

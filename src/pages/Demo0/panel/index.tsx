@@ -88,7 +88,7 @@ const BottomBox = styled.div`
   gap: 20px;
 `;
 
-const Github = styled.a.attrs({
+const Github = styled.div.attrs({
   children: (
     <svg width="1em" height="1em" viewBox="0 0 22 22" version="1.1">
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -157,8 +157,8 @@ export default function Panel() {
     <AutoFit>
       <Radial ref={radialRef} />
       <TitleWrapper ref={topBox.ref}>
-        <Title>经济运行监测</Title>
-        <Github href="https://github.com/knight-L/datav" target="_blank" />
+        <Title>甘肃省经济运行监测</Title>
+        <Github />
       </TitleWrapper>
       <GridWrapper>
         <Card ref={leftBox.ref} style={{ gridArea: "1 / 1 / 3 / 2" }}>

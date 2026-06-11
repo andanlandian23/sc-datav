@@ -54,7 +54,7 @@ export default function Chart1() {
           {
             top: "50%",
             left: "center",
-            text: "成都市",
+            text: "兰州市",
             textStyle: { color: "rgba(255, 255, 255, 0.6)" },
           },
         ],
