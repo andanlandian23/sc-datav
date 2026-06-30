@@ -26,3 +26,14 @@ back
 src/assets/sc_specular_map.png
 src/assets/sc_ambient_occlusion_map.png
 .vercel
+
+# Backend (Spring Boot)
+backend/target/
+backend/.mvn/
+backend/*.jar
+backend/*.class
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/.idea/
+backend/*.iml

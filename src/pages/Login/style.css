@@ -1,0 +1,420 @@
+/* =============================================
+   登录页 - 科技风格
+   ============================================= */
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #040b1a;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ---- 角落装饰 ---- */
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+.corner::before,
+.corner::after {
+  content: '';
+  position: absolute;
+  background: rgba(64, 156, 255, 0.4);
+}
+.corner::before {
+  width: 2px;
+  height: 40px;
+}
+.corner::after {
+  width: 40px;
+  height: 2px;
+}
+.corner-tl {
+  top: 20px;
+  left: 20px;
+}
+.corner-tl::before { top: 0; left: 0; }
+.corner-tl::after { top: 0; left: 0; }
+.corner-tr {
+  top: 20px;
+  right: 20px;
+}
+.corner-tr::before { top: 0; right: 0; }
+.corner-tr::after { top: 0; right: 0; }
+.corner-bl {
+  bottom: 20px;
+  left: 20px;
+}
+.corner-bl::before { bottom: 0; left: 0; }
+.corner-bl::after { bottom: 0; left: 0; }
+.corner-br {
+  bottom: 20px;
+  right: 20px;
+}
+.corner-br::before { bottom: 0; right: 0; }
+.corner-br::after { bottom: 0; right: 0; }
+
+/* ---- 标题 ---- */
+.login-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-title-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 100px;
+  background: radial-gradient(ellipse, rgba(64, 156, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.login-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 8px;
+  margin: 0;
+  text-shadow:
+    0 0 20px rgba(64, 156, 255, 0.5),
+    0 0 40px rgba(64, 156, 255, 0.2);
+}
+
+.login-subtitle {
+  font-size: 12px;
+  color: rgba(64, 156, 255, 0.5);
+  letter-spacing: 6px;
+  margin: 10px 0 0;
+  font-family: monospace;
+}
+
+.title-line {
+  width: 200px;
+  height: 1px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(64, 156, 255, 0.5), transparent);
+}
+
+/* ---- 登录卡片 ---- */
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  padding: 36px 40px;
+  background: rgba(8, 20, 48, 0.85);
+  border: 1px solid rgba(64, 156, 255, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.card-border-top {
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #409cff, transparent);
+}
+
+.card-border-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(64, 156, 255, 0.3), transparent);
+}
+
+/* 角落光点 */
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #409cff;
+  border-left: 2px solid #409cff;
+}
+
+.login-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #409cff;
+  border-right: 2px solid #409cff;
+}
+
+/* ---- 标签 ---- */
+.login-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(64, 156, 255, 0.1);
+}
+
+.login-tab {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  letter-spacing: 4px;
+}
+
+.login-tab .tab-icon {
+  font-size: 10px;
+  margin-right: 4px;
+}
+
+.login-tab.active {
+  color: #409cff;
+}
+
+.login-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #409cff, transparent);
+  box-shadow: 0 0 10px rgba(64, 156, 255, 0.5);
+}
+
+.login-tab:hover {
+  color: rgba(64, 156, 255, 0.7);
+}
+
+/* ---- 输入框 ---- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  font-size: 10px;
+  color: rgba(64, 156, 255, 0.5);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(64, 156, 255, 0.15);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.login-input::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 13px;
+}
+
+.login-input:focus {
+  border-bottom-color: #409cff;
+}
+
+.input-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: #409cff;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px rgba(64, 156, 255, 0.5);
+}
+
+.login-input:focus ~ .input-line {
+  width: 100%;
+}
+
+/* ---- 错误提示 ---- */
+.login-error {
+  color: #ff4757;
+  font-size: 13px;
+  padding: 8px 12px;
+  background: rgba(255, 71, 87, 0.08);
+  border-left: 2px solid rgba(255, 71, 87, 0.5);
+  animation: errorShake 0.3s ease;
+}
+
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* ---- 登录按钮 ---- */
+.login-btn {
+  position: relative;
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid rgba(64, 156, 255, 0.3);
+  color: #409cff;
+  font-size: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  letter-spacing: 6px;
+  transition: all 0.4s;
+}
+
+.login-btn:hover {
+  border-color: #409cff;
+  box-shadow:
+    0 0 15px rgba(64, 156, 255, 0.2),
+    inset 0 0 15px rgba(64, 156, 255, 0.05);
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-bg {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(64, 156, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.login-btn:hover .btn-bg {
+  left: 100%;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(64, 156, 255, 0.3);
+  border-top-color: #409cff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.login-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- 底部信息 ---- */
+.login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-dot {
+  width: 3px;
+  height: 3px;
+  background: rgba(64, 156, 255, 0.3);
+  border-radius: 50%;
+}
+
+/* ---- 版权 ---- */
+.copyright {
+  position: absolute;
+  bottom: 24px;
+  z-index: 2;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: 2px;
+}
+
+/* ---- 动画效果 ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-header {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.login-card {
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* ---- 响应式 ---- */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 28px 24px;
+  }
+
+  .login-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+}
