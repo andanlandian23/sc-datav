@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 
-@Tag(name = "Demo1-智慧城市数据大脑接口")
+@Tag(name = "Demo1-智慧城市数据大脑接口", description = "智慧城市大屏的数据接口")
 @RestController
 @RequestMapping("/api/demo1")
 @RequiredArgsConstructor

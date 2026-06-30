@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-@Tag(name = "Admin-数据管理")
+@Tag(name = "Admin-数据管理", description = "管理员操作：业务数据增删改查")
 @RestController
 @RequestMapping("/api/admin/data")
 @RequiredArgsConstructor

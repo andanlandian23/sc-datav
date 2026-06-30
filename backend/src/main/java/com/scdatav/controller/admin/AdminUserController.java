@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-@Tag(name = "Admin-用户管理")
+@Tag(name = "Admin-用户管理", description = "管理员操作：用户增删改查、状态切换")
 @RestController
 @RequestMapping("/api/admin/users")
 @RequiredArgsConstructor

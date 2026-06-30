@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-@Tag(name = "地理数据接口")
+@Tag(name = "地理数据接口", description = "甘肃省 GeoJSON 地理数据、热力图")
 @RestController
 @RequestMapping("/api/geo")
 @RequiredArgsConstructor
